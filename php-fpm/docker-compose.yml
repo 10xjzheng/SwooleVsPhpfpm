@@ -15,6 +15,7 @@ services:
     php:
         image: 10xjzheng/php-fpm:latest
         volumes:
+            - ./fpm-conf/www.conf:/usr/local/etc/php-fpm.d/www.conf:ro
             - /mnt/d/wamp/www/qmyx-base:/usr/share/nginx/html/qmyx-base:rw
         ports:
             - "9000:9000"
